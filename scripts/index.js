@@ -61,28 +61,27 @@ editProfilePopup.setEventListeners();
 
 
 
-/*
-// import FormValidator from "../components/FormValidator.js";
 
-// import { initApp } from "./utils.js";
+ import FormValidator from "../components/FormValidator.js";
 
-//
+ import { initApp } from "./utils.js";
 
-// initialCards.forEach(({ name, link }) => {
-//   const container = document.querySelector(".elements__container");
-//   const card = new Card(name, link, "#elements-template");
-//   const cardElements = card.generateCard();
-//   container.append(cardElements);
-// });
 
-// const validation = new FormValidator({
-//   formSelector: ".popup__form",
-//   inputSelector: ".popup__input",
-//   submitButtonSelector: ".popup__button",
-//   inactiveButtonClass: "popup__button_disabled",
-//   inputErrorClass: "popup__input_type_error",
-//   errorClass: "popup__error_visible",
-// });
-// validation.enableValidation();
-// initApp();
- */
+
+ initialCards.forEach(({ name, link }) => {
+   const container = document.querySelector(".elements__container");
+   const card = new Card(name, link, "#elements-template");
+   const cardElements = card.generateCard();
+   container.append(cardElements);
+ });
+
+ const validation = new FormValidator({
+   formSelector: ".popup__form",
+   inputSelector: ".popup__input",
+   submitButtonSelector: ".popup__button",
+   inactiveButtonClass: "popup__button_disabled",
+   inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+ });
+ validation.enableValidation();
+ initApp();
