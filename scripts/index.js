@@ -62,18 +62,10 @@ editProfilePopup.setEventListeners();
 
 
 
+
  import FormValidator from "../components/FormValidator.js";
 
- import { initApp } from "./utils.js";
 
-
-
- initialCards.forEach(({ name, link }) => {
-   const container = document.querySelector(".elements__container");
-   const card = new Card(name, link, "#elements-template");
-   const cardElements = card.generateCard();
-   container.append(cardElements);
- });
 
  const validation = new FormValidator({
    formSelector: ".popup__form",
@@ -84,4 +76,3 @@ editProfilePopup.setEventListeners();
   errorClass: "popup__error_visible",
  });
  validation.enableValidation();
- initApp();
